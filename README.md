@@ -18,13 +18,18 @@ docker-compose -f deployments/docker-compose.yml build iapclient
 
 ### Running
 
-Usage:
+
+#### Usage:
 
 ```
     docker run -it iapclient:latest --help
 ```
 
-Full example:
+#### Full example:
+##### Service Account 
+
+To operate the iapclient, you need to have a google cloud service account with the role of 'IAP-secured Web App User'.  The key
+from the service account is then used to auth.
 
 ```
     GC_CREDS=$(cat svcaccnt.json | base64)
