@@ -48,8 +48,8 @@ CLIENT_ID=$(curl -I https://iap.protetected-domain.com | awk '/^location/ {split
 
 ```
     GC_CREDS=$(cat svcaccnt.json | base64)
-    AUTH_HEADER=$(docker run -it iapclient:latest \ 
-      --oauth-client-id=$CLIENT_ID
+    AUTH_HEADER=$(docker run -it iapclient:latest \
+      --oauth-client-id=$CLIENT_ID \
       --google-credentials $CREDS \
       --requested-expiration 1h)
 
