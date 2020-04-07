@@ -53,7 +53,7 @@ CLIENT_ID=$(curl -I https://iap.protetected-domain.com | awk '/^location/ {split
       --google-credentials $CREDS \
       --requested-expiration 1h)
 
-$ curl -D- -s -H "$AUTH_HEADER" https://iap.example.com
+$ curl -D- -s -H "$AUTH_HEADER" https://iap.protetected-domain.com
 HTTP/2 200
 [...]
 ```
