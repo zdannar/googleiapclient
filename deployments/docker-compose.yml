@@ -1,0 +1,10 @@
+version: '3'
+services:
+  iapclient:
+    hostname: iapclient
+    image: iapclient:latest
+    build:
+      context: ..
+      dockerfile: build/docker/geniaptoken/Dockerfile
+    #env_file:
+    #  - ./docker-compose.env
